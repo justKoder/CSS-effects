@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 500px;
+    height: 600px;
+    margin: 100px auto;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    position: relative;
+}
+
+.tag {
+    width: 200px;
+    height: 200px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tag::before {
+    content: " Paper Tag ";
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-color: rgb(0, 140, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: rotate(-45deg) translateY(-20px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tag::after {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    z-index: -1;
+    background-color: rgb(50, 72, 94);
+    box-shadow: 180px -180px rgb(50, 72, 94);
+}
