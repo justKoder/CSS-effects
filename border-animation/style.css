@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    box-shadow: -4px 5px 10px rgba(0, 0, 0);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box::before {
+    content: " ";
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    background-image: conic-gradient(#fff 20deg, transparent 120deg);
+    animation: border-animate 5s linear infinite;
+}
+
+.box::after {
+    content: "Animate";
+    width: 190px;
+    height: 190px;
+    box-shadow: -4px 5px 10px rgba(0, 0, 0) inset;
+    background-color: rgb(26, 26, 26);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 1px 3px 5px rgb(0, 0, 0);
+    letter-spacing: 5px;
+}
+
+@keyframes border-animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+
+.box2 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px 5px 10px rgba(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box2::before {
+    content: "";
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    /* background-image: conic-gradient(red, yellow, green, blue, black, ); */
+    background-image: conic-gradient(red, orange, yellow, green, blue, rgb(26, 26, 26), rgb(26, 26, 26));
+    animation: rotate 5s linear infinite;
+}
+
+.box2::after {
+    content: "Colorful Animation";
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 1px 3px 5px rgb(0, 0, 0);
+    background-color: rgb(26, 26, 26);
+    box-shadow: -4px 5px 10px rgba(0, 0, 0) inset;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
