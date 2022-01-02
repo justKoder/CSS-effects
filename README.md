@@ -1,5 +1,5 @@
 # CSS-effects
-Here I include some css effects 
+Here are some my css effects 
 1) Paper tag
 
 2) Login page
