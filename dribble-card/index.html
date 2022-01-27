@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dribble Card</title>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="main-card" onmouseout="collaps()">
+                <p class="card-text">
+                    Dribble Text
+                </p>
+            </div>
+            <div class="product-card">
+                <div class="product pro1">
+                    <img src="karol.jpg" alt="Karol">
+                </div>
+                <div class="product pro2">
+                    <img src="media.jpg" alt="Karol">
+                </div>
+                <div class="product pro3">
+                    <img src="noah.jpg" alt="Karol">
+                </div>
+                <div class="product pro4">
+                    <img src="veet.jpg" alt="Karol">
+                </div>
+                <div class="product pro5">
+                    <img src="sharon.jpg" alt="Karol">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const pro1 = document.querySelector(".pro1");
+        const pro2 = document.querySelector(".pro2");
+        const pro3 = document.querySelector(".pro3");
+        const pro4 = document.querySelector(".pro4");
+        const pro5 = document.querySelector(".pro5");
+        const card = document.querySelector('.main-card');
+
+        function through() {
+            pro1.classList.add('prod-1');
+            pro2.classList.add('prod-2');
+            pro3.classList.add('prod-3');
+            pro4.classList.add('prod-4');
+            pro5.classList.add('prod-5');
+        }
+        function collaps() {
+            pro1.classList.remove('prod-1');
+            pro2.classList.remove('prod-2');
+            pro3.classList.remove('prod-3');
+            pro4.classList.remove('prod-4');
+            pro5.classList.remove('prod-5');
+        }
+
+        card.addEventListener('mouseover', function () {
+            setTimeout(through, 600);
+        })
+    </script>
+</body>
+
+</html>
