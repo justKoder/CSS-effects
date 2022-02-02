@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Effect</title>
+</head>
+
+<body>
+    <div class="divs" id="parallax">
+        <h1>Div 1</h1>
+    </div>
+    <div class="divs">
+        <h1>Div 2</h1>
+    </div>
+    <div class="divs">
+        <h1>Div 3</h1>
+    </div>
+    <div class="divs">
+        <h1>Div 4</h1>
+    </div>
+
+
+
+    <script>
+        const parallax = document.getElementById('parallax');
+
+        window.addEventListener('scroll', function () {
+            let offset = window.pageYOffset
+            // console.log('This is my offset ' + offset)
+            parallax.style.backgroundPositionY = offset * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
