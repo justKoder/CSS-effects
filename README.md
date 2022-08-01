@@ -1,5 +1,5 @@
 # CSS-effects
-Here are some my css mini projects built using pure HTML, CSS and JavaScript
+Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 
 1) 3d-navbar
 
