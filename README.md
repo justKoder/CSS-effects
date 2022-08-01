@@ -17,3 +17,4 @@ Here are some my css effects
 
 7) Parallax Effect
 
+8) Card Slider
