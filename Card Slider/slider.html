@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slider.css">
+    <title>Card Slider</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider-container">
+            <span class="left-btn btn"></span>
+            <div class="card-container" id="slider">
+                <div class="card">
+                    <p>Card 1</p>
+                </div>
+                <div class="card">
+                    <p>Card 2</p>
+                </div>
+
+                <div class="card">
+                    <p>Card 3</p>
+                </div>
+
+                <div class="card">
+                    <p>Card 4</p>
+                </div>
+
+                <div class="card">
+                    <p>Card 5</p>
+                </div>
+
+                <div class="card">
+                    <p>Card 6</p>
+                </div>
+
+                <div class="card">
+                    <p>Card 7</p>
+                </div>
+                <div class="card">
+                    <p>Card 8</p>
+                </div>
+                <div class="card">
+                    <p>Card 9</p>
+                </div>
+                <div class="card">
+                    <p>Card 10</p>
+                </div>
+                <div class="card">
+                    <p>Card 1</p>
+                </div>
+                <div class="card">
+                    <p>Card 2</p>
+                </div>
+                <div class="card">
+                    <p>Card 3</p>
+                </div>
+                <div class="card">
+                    <p>Card 4</p>
+                </div>
+                <div class="card">
+                    <p>Card 5</p>
+                </div>
+                <div class="card">
+                    <p>Card 6</p>
+                </div>
+                <div class="card">
+                    <p>Card 7</p>
+                </div>
+                <div class="card">
+                    <p>Card 8</p>
+                </div>
+                <div class="card">
+                    <p>Card 9</p>
+                </div>
+                <div class="card">
+                    <p>Card 10</p>
+                </div>
+            </div>
+            <span class="right-btn btn"></span>
+        </div>
+    </div>
+
+    <script>
+        let leftBtn = [...document.getElementsByClassName("left-btn")]
+        let rightBtn = [...document.getElementsByClassName("right-btn")]
+        let slider = [...document.querySelectorAll(".card-container")]
+        let sliderDimension = document.querySelector(".card-container")
+
+
+        slider.forEach((item, i) => {
+            let containerDimension = item.getBoundingClientRect().width;
+            if ((item.childElementCount * 350) < (containerDimension + 100)) {
+                rightBtn[i].style.display = 'none';
+                leftBtn[i].style.display = 'none';
+                item.style.justifyContent = 'space-around';
+            }
+            leftBtn[i].style.display = "none"
+            rightBtn[i].addEventListener('click', () => {
+                item.scrollLeft += containerDimension;
+                leftBtn[i].style.display = 'block';
+            })
+            leftBtn[i].addEventListener('click', () => {
+                item.scrollLeft -= containerDimension;
+                rightBtn[i].style.display = 'block';
+            })
+            item.addEventListener('scroll', () => {
+                if (item.offsetWidth + item.scrollLeft >= (item.scrollWidth - 100)) {
+                    rightBtn[i].style.display = 'none';
+                    leftBtn[i].style.display = 'block';
+                }
+                else if (item.scrollLeft == 0) {
+                    leftBtn[i].style.display = 'none';
+                    rightBtn[i].style.display = 'block';
+                }
+                else if (item.scrollLeft > 0) {
+                    leftBtn[i].style.display = 'block';
+                }
+                if (item.offsetWidth + item.scrollLeft < (item.scrollWidth - 50)) {
+                    rightBtn[i].style.display = 'block';
+                }
+            })
+
+            const slidingFunction = () => {
+                if (item.offsetWidth + item.scrollLeft >= (item.scrollWidth - 100)) {
+                    // item.style.scrollBehavior = "auto";
+                    item.scrollLeft = 0;
+                }
+                if (item.offsetWidth + item.scrollLeft < (item.scrollWidth - 50)) {
+                    // item.style.scrollBehavior = "smooth";
+                    item.scrollLeft += containerDimension;
+                }
+            }
+
+            setInterval(() => slidingFunction(), 5000)
+        })
+    </script>
+</body>
+
+</html>
