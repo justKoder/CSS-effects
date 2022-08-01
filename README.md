@@ -1,20 +1,28 @@
 # CSS-effects
-Here are some my css effects 
-1) Paper tag
+Here are some my css mini projects built using pure HTML, CSS and JavaScript
 
-2) Login page
+1) 3d-navbar
+
+2) Card Slider
 
 3) Border Animation
 
-4) Rain effect
-
-5) Water Drop
+4) Card-1
 
 5) Contact-Form
 
-6) Contact Form 2
+6) Dribble-Card
 
+7) Login page
 
-7) Parallax Effect
+8) navbar-animation
 
-8) Card Slider
+9) Paper tag
+
+10) Parallax Effect
+
+11) profile-card
+
+12) rain-css
+
+13) water-drop
