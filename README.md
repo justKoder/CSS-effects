@@ -28,3 +28,5 @@ Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 13) water-drop
 
 14) Carousel
+
+15) Card CLosing animation on hover
