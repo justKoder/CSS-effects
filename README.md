@@ -35,4 +35,4 @@ Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 
 17) Card 2
 
-18 Contact Form-1
+18) Footer
