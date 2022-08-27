@@ -32,3 +32,7 @@ Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 15) Card CLosing animation on hover
 
 16) About Us 
+
+17) Card 2
+
+18 Contact Form-1
