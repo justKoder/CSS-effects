@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carousel</title>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel_image active">
+            <img src="https://images.unsplash.com/photo-1413752362258-7af2a667b590?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1625602812206-5ec545ca1231?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1566908829550-e6551b00979b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1608058204446-1cf0f7d11d38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Landscape 1">
+        </div>
+        <div class="carousel_image">
+            <img src="https://images.unsplash.com/photo-1521543387600-c745f8e83d77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Landscape 1">
+        </div>
+    </div>
+    <div class="btn-container">
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+    </div>
+
+    <script>
+        const carouselImage = document.querySelectorAll(".carousel_image");
+        const btns = document.querySelectorAll(".btn")
+        k = 1;
+        setInterval(function () {
+            for (let i = 0; i < carouselImage.length; i++) {
+                carouselImage[i].classList.remove("active");
+            }
+            if (k < carouselImage.length) {
+                carouselImage[k].classList.add("active");
+                k++;
+            }
+            else if (k == carouselImage.length) {
+                carouselImage[0].classList.add("active");
+                k = 1;
+            }
+            else if (k > carouselImage.length) {
+                k = 1;
+            }
+
+        }, 10000);
+
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                for (let i = 0; i < btns.length; i++) {
+                    btns[i].classList.remove("active");
+                    carouselImage[i].classList.remove("active");
+                }
+                console.log(i)
+                btn.classList.add("active");
+                carouselImage[i].classList.add("active");
+                setTimeout(() => {
+                    btn.classList.remove("active");
+                }, 2000)
+            })
+        })
+        // setInterval(function () {
+        //     for (let i = 0; i < btns.length; i++) {
+        //         btns[i].classList.remove("active");
+        //     }
+        //     if (k < btns.length) {
+        //         console.log("Less hai", k)
+        //         btns[k].classList.add("active");
+        //         k++;
+        //     }
+        //     else if (k == btns.length) {
+        //         console.log("Equal hai", k)
+        //         k = 0;
+        //     }
+        //     else if (k > btns.length) {
+        //         console.log("Greater hai", k)
+        //         k = 0;
+        //     }
+
+        // }, 1000);
+    </script>
+</body>
+
+</html>
