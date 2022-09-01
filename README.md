@@ -38,3 +38,5 @@ Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 18) Footer
 
 19) Multiple Dropdown
+
+20) Animated Carousel
