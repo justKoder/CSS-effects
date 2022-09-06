@@ -40,3 +40,5 @@ Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 19) Multiple Dropdown
 
 20) Animated Carousel
+
+21) Text Typing Animation
