@@ -42,3 +42,5 @@ Here are some of my mini CSS projects built using pure HTML, CSS and JavaScript
 20) Animated Carousel
 
 21) Text Typing Animation
+
+22) Grid Cards
