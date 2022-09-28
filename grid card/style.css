@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainContainer{
+    max-width: 1400px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    width: 100%;
+}
+
+.left{
+    width: 340px;
+}
+
+.card-container {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.card-container .top{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+}
+
+.card-container .top .card{
+    background-color: yellow;
+    color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card-container .top .card:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-container .bottom{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    gap: 20px;
+}
+
+.card-container .bottom .card{
+    background-color: rgb(255, 0, 132);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #fff;
+}
+
+.left .top{
+    position: sticky;
+    top: 20px;
+}
+
+.categoryContainer{
+    text-align: center;
+}
+
+.categoryContainer .headText{
+    font-size: 30px;
+    color: #000;
+    letter-spacing: 1px;
+    margin: 30px auto;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.cat{
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    overflow: hidden;
+}
